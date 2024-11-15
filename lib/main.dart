@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/pages/bottomnav.dart';
 import 'package:e_commerce_app/pages/home.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Home()
+      home: BottomNav()
     );
   }
 }
