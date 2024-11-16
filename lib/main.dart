@@ -1,5 +1,8 @@
 import 'package:e_commerce_app/pages/bottomnav.dart';
 import 'package:e_commerce_app/pages/home.dart';
+import 'package:e_commerce_app/pages/login.dart';
+import 'package:e_commerce_app/pages/onboard.dart';
+import 'package:e_commerce_app/pages/signup.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BottomNav()
+      home: Signup()
     );
   }
 }

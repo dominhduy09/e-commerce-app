@@ -27,7 +27,7 @@ class AppWidget {
 
   static TextStyle semiBoldTextFieldStyle() {
     return TextStyle(
-        color: Colors.black38,
+        color: Colors.black,
         fontSize: 18.0,
         fontWeight: FontWeight.w500,
         fontFamily: 'Roboto');

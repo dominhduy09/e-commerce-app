@@ -9,6 +9,8 @@ class Details extends StatefulWidget {
 }
 
 class _DetailsState extends State<Details> {
+  int a = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,25 +33,115 @@ class _DetailsState extends State<Details> {
               height: MediaQuery.of(context).size.height / 2.5,
               fit: BoxFit.fill,
             ),
-
-            SizedBox(height: 15.0,),
-
+            SizedBox(
+              height: 15.0,
+            ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Mediterranean", style: AppWidget.boldTextFieldStyle(),),
-                  Text("Chickpea Salad", style: AppWidget.HeadLineTextFieldStyle(),),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Mediterranean",
+                      style: AppWidget.boldTextFieldStyle(),
+                    ),
+                    Text(
+                      "Chickpea Salad",
+                      style: AppWidget.HeadLineTextFieldStyle(),
+                    ),
+                  ],
+                ),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {
+                    if (a > 1) {
+                      --a;
+                    }
+                    setState(() {});
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Icon(
+                      Icons.remove,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20.0,
+                ),
+                Text(
+                  a.toString(),
+                  style: AppWidget.semiBoldTextFieldStyle(),
+                ),
+                SizedBox(
+                  width: 20.0,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    ++a;
+                    setState(() {});
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "A salad is a fresh, colorful mix of vegetables, fruits, greens, and sometimes protein or grains. It can include ingredients like lettuce, tomatoes, cucumbers, avocado, nuts, and cheese, often dressed with oil, vinegar, or creamy sauces. It's healthy and versatile.", maxLines: 3,
+              style: AppWidget.LightTextFieldStyle(),
+            ),
+            SizedBox(height: 30.0,),
+            Row(children: [
+              Text("Delivery time", style: AppWidget.boldTextFieldStyle(),),
+              SizedBox(width: 25.0,),
+              Icon(Icons.alarm, color: Colors.black54,),
+              SizedBox(width: 5.0,),
+              Text("30 mins", style: AppWidget.semiBoldTextFieldStyle(),)
+            ],),
 
-                ],
-              ),
-              Container(
-                decoration: BoxDecoration(color: Colors.black),
-                child: Icon(Icons.remove, color: Colors.white,),
-              )
-            ],)
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(children: [
+                    Text("Total price", style: AppWidget.semiBoldTextFieldStyle(),),
+                    Text("\$28", style: AppWidget.HeadLineTextFieldStyle(),),
+                  ],),
+                  Container(
+                    width: MediaQuery.of(context).size.width/2,
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text("Add to cart", style: TextStyle(color: Colors.white, fontSize: 16.0, fontFamily: 'Roboto'),),
+                        SizedBox(width: 30,),
+                        Container(
+                          padding: EdgeInsets.all(3),
+                          decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(8)),
+                          child: Icon(Icons.shopping_cart_outlined, color: Colors.white,),
+                        ),
+                        SizedBox(width: 10,),
+                      ],
+                    ),
+                  )
+                ],),
+            )
           ],
         ),
       ),
