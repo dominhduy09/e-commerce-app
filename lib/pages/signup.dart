@@ -1,7 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_app/pages/bottomnav.dart';
 import 'package:e_commerce_app/pages/login.dart';
 import 'package:e_commerce_app/widget/widget_support.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatefulWidget {
@@ -12,48 +13,49 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
-  // String email = "", password = "", name = "";
-  //
-  // TextEditingController namecontroller = new TextEditingController();
-  //
-  // TextEditingController passwordcontroller = new TextEditingController();
-  //
-  // TextEditingController mailcontroller = new TextEditingController();
-  //
-  // final _formkey = GlobalKey<FormState>();
-  //
-  // registration() async {
-  //   if (password != null) {
-  //     try {
-  //       UserCredential userCredential = await FirebaseAuth.instance
-  //           .createUserWithEmailAndPassword(email: email, password: password);
-  //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //           backgroundColor: Colors.redAccent,
-  //           content: Text(
-  //             "Register successfully",
-  //             style: TextStyle(fontSize: 20.0),
-  //           )));
-  //       Navigator.pushReplacement(
-  //           context, MaterialPageRoute(builder: (context) => BottomNav()));
-  //     } on FirebaseException catch (e) {
-  //       if (e.code == 'weak-password') {
-  //         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //             backgroundColor: Colors.orangeAccent,
-  //             content: Text(
-  //               "Password is too weak",
-  //               style: TextStyle(fontSize: 18.0),
-  //             )));
-  //       } else if (e.code == 'email-already-in-use') {
-  //         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-  //             backgroundColor: Colors.orangeAccent,
-  //             content: Text(
-  //               "Account already exists",
-  //               style: TextStyle(fontSize: 18.0),
-  //             )));
-  //       }
-  //     }
-  //   }
-  // }
+  String email = "", password = "", name = "";
+
+  TextEditingController namecontroller = new TextEditingController();
+
+  TextEditingController passwordcontroller = new TextEditingController();
+
+  TextEditingController mailcontroller = new TextEditingController();
+
+  final _formkey = GlobalKey<FormState>();
+
+  registration() async {
+    if (password != null) {
+      try {
+        UserCredential userCredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.redAccent,
+            content: Text(
+              "Register successfully",
+              style: TextStyle(fontSize: 20.0),
+            )));
+
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => BottomNav()));
+      } on FirebaseException catch (e) {
+        if (e.code == 'weak-password') {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              backgroundColor: Colors.orangeAccent,
+              content: Text(
+                "Password is too weak",
+                style: TextStyle(fontSize: 18.0),
+              )));
+        } else if (e.code == 'email-already-in-use') {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              backgroundColor: Colors.orangeAccent,
+              content: Text(
+                "Account already exists",
+                style: TextStyle(fontSize: 18.0),
+              )));
+        }
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +85,7 @@ class _SignupState extends State<Signup> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40))),
-              child: Text("data"),
+              child: Text(""),
             ),
             Container(
               margin: EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
@@ -109,8 +111,8 @@ class _SignupState extends State<Signup> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(20)),
                       child: Form(
+                        key: _formkey,
                         child: Column(
-                          // key: _formkey,
                           children: [
                             SizedBox(
                               height: 30.0,
@@ -122,14 +124,14 @@ class _SignupState extends State<Signup> {
                             SizedBox(
                               height: 30.0,
                             ),
-                            TextField(
-                              // controller: namecontroller,
-                              // validator: (value) {
-                              //   if (value == null || value.isEmpty) {
-                              //     return 'Please enter email!';
-                              //   }
-                              //   return null;
-                              // },
+                            TextFormField(
+                              controller: namecontroller,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter email!';
+                                }
+                                return null;
+                              },
                               decoration: InputDecoration(
                                   hintText: 'Name',
                                   hintStyle: AppWidget.semiBoldTextFieldStyle(),
@@ -138,14 +140,14 @@ class _SignupState extends State<Signup> {
                             SizedBox(
                               height: 30.0,
                             ),
-                            TextField(
-                              // controller: mailcontroller,
-                              // validator: (value) {
-                              //   if (value == null || value.isEmpty) {
-                              //     return 'Please enter name!';
-                              //   }
-                              //   return null;
-                              // },
+                            TextFormField(
+                              controller: mailcontroller,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter name!';
+                                }
+                                return null;
+                              },
                               decoration: InputDecoration(
                                   hintText: 'Email',
                                   hintStyle: AppWidget.semiBoldTextFieldStyle(),
@@ -154,14 +156,14 @@ class _SignupState extends State<Signup> {
                             SizedBox(
                               height: 30.0,
                             ),
-                            TextField(
-                              // controller: passwordcontroller,
-                              // validator: (value) {
-                              //   if (value == null || value.isEmpty) {
-                              //     return 'Please enter password!';
-                              //   }
-                              //   return null;
-                              // },
+                            TextFormField(
+                              controller: passwordcontroller,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter password!';
+                                }
+                                return null;
+                              },
                               obscureText: true,
                               decoration: InputDecoration(
                                   hintText: 'Password',
@@ -172,16 +174,16 @@ class _SignupState extends State<Signup> {
                               height: 80.0,
                             ),
                             GestureDetector(
-                              // onTap: () async {
-                              //   if (_formkey.currentState!.validate()) {
-                              //     setState(() {
-                              //       email = mailcontroller.text;
-                              //       name = namecontroller.text;
-                              //       password = passwordcontroller.text;
-                              //     });
-                              //   }
-                              //   registration();
-                              // },
+                              onTap: () async {
+                                if (_formkey.currentState!.validate()) {
+                                  setState(() {
+                                    email = mailcontroller.text;
+                                    name = namecontroller.text;
+                                    password = passwordcontroller.text;
+                                  });
+                                }
+                                registration();
+                              },
                               child: Material(
                                 elevation: 5.0,
                                 borderRadius: BorderRadius.circular(20),

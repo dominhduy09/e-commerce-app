@@ -1,4 +1,4 @@
-// import 'package:e_commerce_app/pages/signup.dart';
+import 'package:e_commerce_app/pages/signup.dart';
 import 'package:e_commerce_app/widget/content_model.dart';
 import 'package:e_commerce_app/widget/widget_support.dart';
 import 'package:flutter/material.dart';
@@ -85,15 +85,15 @@ class _OnboardState extends State<Onboard> {
             ),
           ),
           GestureDetector(
-            // onTap: () {
-            //   if (currentIndex == contents.length - 1) {
-            //     Navigator.pushReplacement(
-            //         context, MaterialPageRoute(builder: (context) => Signup()));
-            //   }
-            //   _controller.nextPage(
-            //       duration: Duration(milliseconds: 100),
-            //       curve: Curves.bounceIn);
-            // },
+            onTap: () {
+              if (currentIndex == contents.length - 1) {
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (context) => Signup()));
+              }
+              _controller.nextPage(
+                  duration: Duration(milliseconds: 100),
+                  curve: Curves.bounceIn);
+            },
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.red, borderRadius: BorderRadius.circular(20)),

@@ -118,29 +118,29 @@ class _DetailsState extends State<Details> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(children: [
-                    Text("Total price", style: AppWidget.semiBoldTextFieldStyle(),),
-                    Text("\$28", style: AppWidget.HeadLineTextFieldStyle(),),
-                  ],),
-                  Container(
-                    width: MediaQuery.of(context).size.width/2,
-                    padding: EdgeInsets.all(8),
-                    decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text("Add to cart", style: TextStyle(color: Colors.white, fontSize: 16.0, fontFamily: 'Roboto'),),
-                        SizedBox(width: 30,),
-                        Container(
-                          padding: EdgeInsets.all(3),
-                          decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(8)),
-                          child: Icon(Icons.shopping_cart_outlined, color: Colors.white,),
-                        ),
-                        SizedBox(width: 10,),
-                      ],
-                    ),
-                  )
+                Column(children: [
+                  Text("Total price", style: AppWidget.semiBoldTextFieldStyle(),),
+                  Text("\$28", style: AppWidget.HeadLineTextFieldStyle(),),
                 ],),
+                Container(
+                  width: MediaQuery.of(context).size.width/2,
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Text("Add to cart", style: TextStyle(color: Colors.white, fontSize: 16.0, fontFamily: 'Roboto'),),
+                      SizedBox(width: 30,),
+                      Container(
+                        padding: EdgeInsets.all(3),
+                        decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(8)),
+                        child: Icon(Icons.shopping_cart_outlined, color: Colors.white,),
+                      ),
+                      SizedBox(width: 10,),
+                    ],
+                  ),
+                )
+              ],),
             )
           ],
         ),
