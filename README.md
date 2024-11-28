@@ -1,6 +1,15 @@
 # e_commerce_app
-
 A new Flutter e_commerce_app project.
+
+## DSA Project
+Food delivery app
+
+## Team
+- Do Minh Duy
+- Ly Khai Minh
+
+## Reference
+https://www.youtube.com/watch?v=h3-9LJDOlIA
 
 ## Getting Started
 
