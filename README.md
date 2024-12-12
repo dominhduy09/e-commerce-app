@@ -13,8 +13,8 @@ https://www.youtube.com/watch?v=h3-9LJDOlIA
 
 ## Demo
 ![image](https://github.com/user-attachments/assets/9ec73036-20e6-4be4-98bd-ed898e0fe4a1)
-![video](https://github.com/dominhduy09/e-commerce-app/blob/main/49f15a06-5678-4350-81ea-7b8a6ad97dcb.mp4)
-![video](https://github.com/dominhduy09/e-commerce-app/blob/main/0e9676f2-c82d-4eae-95c3-7067b56e8d0b.mp4)
+![Watch the video](https://github.com/dominhduy09/e-commerce-app/blob/main/49f15a06-5678-4350-81ea-7b8a6ad97dcb.mp4)
+![Watch the video](https://github.com/dominhduy09/e-commerce-app/blob/main/0e9676f2-c82d-4eae-95c3-7067b56e8d0b.mp4)
 
 
 ## Installing with Android phone using APK file
