@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=h3-9LJDOlIA
 ![image](https://github.com/user-attachments/assets/9ec73036-20e6-4be4-98bd-ed898e0fe4a1)
 
 ## Installing with Android phone using APK file
-- Click here: 
+- Click here: https://github.com/dominhduy09/e-commerce-app/releases/download/eCommerce95%25Finished/app-release.apk
 
 ## Getting Started
 
