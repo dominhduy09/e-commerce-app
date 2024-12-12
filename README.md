@@ -13,6 +13,8 @@ https://www.youtube.com/watch?v=h3-9LJDOlIA
 
 ## Demo
 ![image](https://github.com/user-attachments/assets/9ec73036-20e6-4be4-98bd-ed898e0fe4a1)
+https://github.com/dominhduy09/e-commerce-app/blob/main/49f15a06-5678-4350-81ea-7b8a6ad97dcb.mp4
+
 
 ## Installing with Android phone using APK file
 - Click here: https://github.com/dominhduy09/e-commerce-app/releases/download/eCommerce95%25Finished/app-release.apk
