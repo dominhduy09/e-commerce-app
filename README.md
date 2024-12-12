@@ -14,6 +14,8 @@ https://www.youtube.com/watch?v=h3-9LJDOlIA
 ## Demo
 ![image](https://github.com/user-attachments/assets/9ec73036-20e6-4be4-98bd-ed898e0fe4a1)
 
+## Installing with Android phone using APK file
+- Click here: 
 
 ## Getting Started
 
@@ -28,4 +30,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-> Updated 28/11/2024
+> Updated 12/12/2024
